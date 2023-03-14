@@ -1,0 +1,152 @@
+
+PCM-1 - set up hibernate config
+
+
+PCM-2 - create hibernate model
+
+
+PCM-3 - create generic hibernate repository
+
+
+PCM-4 - implement menu
+
+
+
+
+////////////////////////////////////////////////////////
+
+
+PCM-5- IMPLEMENT VET CREATION
+
+As a user I should be able to add a new vet with its details (firstname, lastname, address, speciality)
+    If the creation process is successful, the system will allocate a unique id for the new vet
+    The system will validate the following data:
+        - firstname, lastname, address, speciality to be not blank and not empty
+
+    Otherwise, the system will return an appropriate message on the screen.
+
+PCM-6 - IMPLEMENT VIEW ALL VETS
+As a user I should be able to view all the existing vets in the system.
+        I should be able to view a list where each line will contain: id, firstName, lastName
+
+PCM-7 - IMPLEMENT VIEW VET BY ID
+
+ As a user I should be able to view all the details of an existing vet by id.
+         If the given id is found in the system, the following details will be displayed:
+         - id, firstname, lastname, address, speciality
+
+       Otherwise, the system will return an appropriate message on the screen.
+
+
+PCM-8 - IMPLEMENT UPDATE VET
+
+As a user I should be able to update the details of an existing vet.
+    If the vet is found by id in the system, I should be able to update the following data: lastname, address, speciality
+     The system will validate the following data:
+            - lastname, address, speciality to be not blank and not empty
+
+    Otherwise, the system will return an appropriate message on the screen.
+
+
+PCM-9 - IMPLEMENT DELETE VET
+
+As a user I should be able to delete an existing vet by id.
+    If the vet is found by id in the system, I should be able to delete the vet.
+
+    Otherwise, the system will return an appropriate message on the screen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+PCM-10 - IMPLEMENT PET CREATION
+
+As a user I should be able to add a new pet with its details (race, birthdate, isVaccinated, ownerName)
+    If the creation process is successful, the system will allocate a unique id for the new pet
+    The system will validate the following data:
+        - race, birthdate(not in the future), isVaccinated, ownerName to be not blank and not empty
+
+    Otherwise, the system will return an appropriate message on the screen.
+
+PCM-11 - IMPLEMENT VIEW ALL PETS
+As a user I should be able to view all the existing pets in the system.
+        I should be able to view a list where each line will contain: race, ownerName
+
+PCM-12 - IMPLEMENT VIEW PET BY ID
+
+ As a user I should be able to view all the details of an existing pet by id.
+         If the given id is found in the system, the following details will be displayed:
+         - race, birthdate, isVaccinated, ownerName
+
+       Otherwise, the system will return an appropriate message on the screen.
+
+
+PCM-13 - IMPLEMENT UPDATE PET
+
+As a user I should be able to update the details of an existing pet.
+    If the pet is found by id in the system, I should be able to update the following data: race, birthdate, isVaccinated, ownerName
+     The system will validate the following data:
+            -  isVaccinated, ownerName to be not blank and not empty
+
+    Otherwise, the system will return an appropriate message on the screen.
+
+
+PCM-14 - IMPLEMENT DELETE PET
+
+As a user I should be able to delete an existing pet by id.
+    If the pet is found by id in the system, I should be able to delete it.
+
+    Otherwise, the system will return an appropriate message on the screen.
+
+
+
+
+
+
+
+
+
+
+ PCM-15- IMPLEMENT CREATE CONSULT
+        As a user I should be able to add a new CONSULT with its details (vet_id, pet_id, date, description)
+            If the creation process is successful, the system will allocate a unique id for the new CONSULT
+            The system will validate the following data:
+                - vet_id, pet_id to be not blank and not empty and to be present in the system
+                - date to be not blank and not empty
+                - description to not be blank and not empty
+
+            Otherwise, the system will return an appropriate message on the screen.
+
+
+           PCM-16 - IMPLEMENT VIEW ALL CONSULTS
+            As a user I should be able to view all the existing consults in the system.
+                    I should be able to view a list where each line will contain: consult_id, vet_name,date,ownerName
+
+
+           PCM-17 - IMPLEMENT VIEW CONSULT BY ID
+
+             As a user I should be able to view all the details of an existing consult by id.
+                     If the given id is found in the system, the following details will be displayed:
+                     - id, vet_name, ownerName, race, date, description
+
+                   Otherwise, the system will return an appropriate message on the screen.
+
+
+           PCM-18 - IMPLEMENT UPDATE CONSULT
+
+            As a user I should be able to update the details of an existing CONSULT.
+                If the CONSULT is found by id in the system, I should be able to update the following data: description
+                 The system will validate the following data:
+                        -  description to be not blank and not empty
+
+                Otherwise, the system will return an appropriate message on the screen.
+
+--------------------------------------------------------------------------------------------------------------------------

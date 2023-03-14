@@ -1,5 +1,6 @@
 Pet Clinic management system:
 Java Desktop Application used for managing a pet clinic
+
 One window for CRUD operations on Veterinarian (firstname, lastname, address, speciality):
 allows the viewing of all the vets; adding a new vet; deleting an existing vet and updating an existing vet
 

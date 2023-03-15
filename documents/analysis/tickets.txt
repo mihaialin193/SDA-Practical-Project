@@ -1,5 +1,5 @@
 
-PCM-1 - set up hibernate config
+DONE- PCM-1  - set up hibernate config
 
 
 PCM-2 - create hibernate model

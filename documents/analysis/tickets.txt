@@ -2,7 +2,7 @@
 DONE- PCM-1  - set up hibernate config
 
 
-PCM-2 - create hibernate model
+DONE- PCM-2 - create hibernate model
 
 
 PCM-3 - create generic hibernate repository

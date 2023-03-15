@@ -1,4 +1,4 @@
-package com.sda.practicalproject.models;
+package com.sda.practicalproject.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -61,6 +61,14 @@ public class Consult {
 
     public void setVet(Vet vet) {
         this.vet = vet;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 
     @Override

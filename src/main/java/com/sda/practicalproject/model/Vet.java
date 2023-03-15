@@ -1,7 +1,6 @@
-package com.sda.practicalproject.models;
+package com.sda.practicalproject.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "vet")

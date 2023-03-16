@@ -38,7 +38,7 @@ PCM-7 - IMPLEMENT VIEW VET BY ID
        Otherwise, the system will return an appropriate message on the screen.
 
 
-PCM-8 - IMPLEMENT UPDATE VET
+-DONE- PCM-8 - IMPLEMENT UPDATE VET
 
 As a user I should be able to update the details of an existing vet.
     If the vet is found by id in the system, I should be able to update the following data: lastname, address, speciality

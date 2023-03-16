@@ -8,7 +8,7 @@ DONE- PCM-2 - create hibernate model
 -DONE-PCM-3 - create generic hibernate repository
 
 
-PCM-4 - implement menu
+-DONE-PCM-4 - implement menu
 
 
 
@@ -16,7 +16,7 @@ PCM-4 - implement menu
 ////////////////////////////////////////////////////////
 
 
-PCM-5- IMPLEMENT VET CREATION
+- DONE - PCM-5- IMPLEMENT VET CREATION
 
 As a user I should be able to add a new vet with its details (firstname, lastname, address, speciality)
     If the creation process is successful, the system will allocate a unique id for the new vet

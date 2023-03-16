@@ -8,6 +8,7 @@ import com.sda.practicalproject.service.exception.EntityNotFoundException;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class VetController {
@@ -72,6 +73,25 @@ public class VetController {
             System.err.println(e.getMessage());
             System.out.println("Please retry");
         } catch (EntityNotFoundException e) {
+            System.err.println(e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Internal server error");
+        }
+    }
+
+    public void findVetById() {
+        try {
+            System.out.println("Please enter the vet's id");
+            long id = Long.parseLong(scanner.nextLine());
+            Optional<Vet> optionalVet = vetService.findVetById(id);
+            if (optionalVet.isPresent()) {
+                System.out.println(optionalVet.get());
+            } else {
+                System.out.println("Vet was not found by id: " + id);
+            }
+        } catch (NumberFormatException e) {
+            System.err.println("Please insert a valid numeric id");
+        } catch (IllegalArgumentException e) {
             System.err.println(e.getMessage());
         } catch (Exception e) {
             System.err.println("Internal server error");

@@ -9,6 +9,8 @@ public enum MenuItem {
 
     VIEW_VET_LIST(4, "View Vet list"),
 
+    VIEW_VET_BY_ID(5,"View Vet by ID"),
+
     EXIT(100,"Quit app"),
 
     UNKNOWN(9999, "Unknown option");

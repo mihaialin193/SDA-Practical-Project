@@ -29,7 +29,7 @@ As a user I should be able to add a new vet with its details (firstname, lastnam
 As a user I should be able to view all the existing vets in the system.
         I should be able to view a list where each line will contain: id, firstName, lastName
 
-PCM-7 - IMPLEMENT VIEW VET BY ID
+- DONE - PCM-7 - IMPLEMENT VIEW VET BY ID
 
  As a user I should be able to view all the details of an existing vet by id.
          If the given id is found in the system, the following details will be displayed:

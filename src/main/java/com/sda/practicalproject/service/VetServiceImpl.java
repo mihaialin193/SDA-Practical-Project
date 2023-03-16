@@ -4,6 +4,8 @@ import com.sda.practicalproject.model.Vet;
 import com.sda.practicalproject.repository.VetRepositoryImpl;
 import com.sda.practicalproject.repository.exception.EntityUpdateFailedException;
 
+import java.util.List;
+
 public class VetServiceImpl implements VetService {
 
     private final VetRepositoryImpl vetRepository;
@@ -19,7 +21,7 @@ public class VetServiceImpl implements VetService {
                        String speciality
     ) throws EntityUpdateFailedException {
 
-        if(firstName == null || firstName.isBlank() || firstName.isEmpty()){
+        if (firstName == null || firstName.isBlank() || firstName.isEmpty()) {
             throw new IllegalArgumentException("First name is null or blank");
         }
         if (lastName == null || lastName.isBlank() || lastName.isEmpty()) {
@@ -32,7 +34,12 @@ public class VetServiceImpl implements VetService {
             throw new IllegalArgumentException("Speciality is null or blank");
         }
 
-        Vet vet = new Vet(firstName,lastName,address,speciality);
+        Vet vet = new Vet(firstName, lastName, address, speciality);
         vetRepository.save(vet);
+    }
+
+    @Override
+    public List<Vet> getAllVets() {
+        return vetRepository.findAll();
     }
 }

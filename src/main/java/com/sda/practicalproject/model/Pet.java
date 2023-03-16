@@ -7,9 +7,9 @@ import java.util.List;
 @Entity
 @Table(name = "pet")
 public class Pet {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
     @Column(name = "race")
 
@@ -29,6 +29,7 @@ public class Pet {
 
     public Pet() {
     }
+
     public Pet(String race, Date birthDate, boolean isVaccinated, String ownerName) {
         this.race = race;
         this.birthDate = birthDate;

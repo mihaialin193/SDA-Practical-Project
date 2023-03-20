@@ -61,6 +61,9 @@ public class Main {
                 case ADD_PET:
                     petController.createPet();
                     break;
+                case VIEW_PET_LIST:
+                    petController.viewAllPets();
+                    break;
                 case EXIT:
                     System.out.println("Goodbye");
                     break;

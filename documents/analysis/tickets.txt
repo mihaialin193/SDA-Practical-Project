@@ -70,7 +70,7 @@ As a user I should be able to add a new pet with its details (race, birthdate, i
 
     Otherwise, the system will return an appropriate message on the screen.
 
-PCM-11 - IMPLEMENT VIEW ALL PETS
+- DONE- PCM-11 - IMPLEMENT VIEW ALL PETS
 As a user I should be able to view all the existing pets in the system.
         I should be able to view a list where each line will contain: race, ownerName
 

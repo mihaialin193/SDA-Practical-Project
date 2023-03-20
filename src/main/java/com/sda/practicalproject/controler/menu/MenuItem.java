@@ -13,6 +13,8 @@ public enum MenuItem {
 
     ADD_PET(6, "Add a Pet"),
 
+    VIEW_PET_LIST(7,"View Pet list"),
+
     EXIT(100,"Quit app"),
 
     UNKNOWN(9999, "Unknown option");

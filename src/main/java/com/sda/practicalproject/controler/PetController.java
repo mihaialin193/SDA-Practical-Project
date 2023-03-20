@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class PetController {
     private final Scanner scanner;
@@ -48,5 +49,12 @@ public class PetController {
         } catch (Exception e) {
             System.err.println("Internal server error");
         }
+    }
+
+    public void viewAllPets(){
+        petService.getAllPets().forEach(pet -> System.out.println("Pet id " + pet.getId() +
+                " pet race " + pet.getRace() +
+                " pet owner " + pet.getOwnerName())
+        );
     }
 }

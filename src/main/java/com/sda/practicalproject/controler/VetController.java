@@ -97,4 +97,23 @@ public class VetController {
             System.err.println("Internal server error");
         }
     }
+
+    public void deleteVetById(){
+        try {
+            System.out.println("Please enter the vet's id");
+            long id = Long.parseLong(scanner.nextLine());
+
+            vetService.deleteVetById(id);
+            System.out.println("Vet was successfully deleted");
+        } catch (NumberFormatException e) {
+            System.err.println("Please insert a valid numeric id");
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+        }catch (EntityNotFoundException e){
+            System.err.println("Vet at id not found");
+        }
+        catch (Exception e) {
+            System.err.println("Internal server error");
+        }
+    }
 }

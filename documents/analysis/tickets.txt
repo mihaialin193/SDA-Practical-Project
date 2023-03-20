@@ -48,7 +48,7 @@ As a user I should be able to update the details of an existing vet.
     Otherwise, the system will return an appropriate message on the screen.
 
 
-PCM-9 - IMPLEMENT DELETE VET
+-DONE- PCM-9 - IMPLEMENT DELETE VET
 
 As a user I should be able to delete an existing vet by id.
     If the vet is found by id in the system, I should be able to delete the vet.

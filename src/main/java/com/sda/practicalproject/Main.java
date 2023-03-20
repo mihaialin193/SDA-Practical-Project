@@ -43,7 +43,7 @@ public class Main {
                     vetController.updateVet();
                     break;
                 case DELETE_VET:
-                    System.out.println("Delete vet not implemented");
+                    vetController.deleteVetById();
                     break;
                 case VIEW_VET_LIST:
                     vetController.displayAllVets();

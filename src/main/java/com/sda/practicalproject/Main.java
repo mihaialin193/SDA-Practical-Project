@@ -1,8 +1,11 @@
 package com.sda.practicalproject;
 
+import com.sda.practicalproject.controler.PetController;
 import com.sda.practicalproject.controler.VetController;
 import com.sda.practicalproject.controler.menu.MenuItem;
+import com.sda.practicalproject.repository.PetRepositoryImpl;
 import com.sda.practicalproject.repository.VetRepositoryImpl;
+import com.sda.practicalproject.service.PetServiceImpl;
 import com.sda.practicalproject.service.VetServiceImpl;
 import com.sda.practicalproject.utils.SessionManager;
 
@@ -15,6 +18,10 @@ public class Main {
         VetController vetController = new VetController(
                 new VetServiceImpl(new VetRepositoryImpl()),
                 scanner
+        );
+
+        PetController petController = new PetController(
+                scanner, new PetServiceImpl(new PetRepositoryImpl())
         );
 
         for (int i = 0; i < 100; i++) {
@@ -50,6 +57,9 @@ public class Main {
                     break;
                 case VIEW_VET_BY_ID:
                     vetController.findVetById();
+                    break;
+                case ADD_PET:
+                    petController.createPet();
                     break;
                 case EXIT:
                     System.out.println("Goodbye");

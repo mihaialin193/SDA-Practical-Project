@@ -11,6 +11,8 @@ public enum MenuItem {
 
     VIEW_VET_BY_ID(5,"View Vet by ID"),
 
+    ADD_PET(6, "Add a Pet"),
+
     EXIT(100,"Quit app"),
 
     UNKNOWN(9999, "Unknown option");

@@ -64,6 +64,9 @@ public class Main {
                 case VIEW_PET_LIST:
                     petController.viewAllPets();
                     break;
+                case VIEW_PET_BY_ID:
+                    petController.viewPetById();
+                    break;
                 case EXIT:
                     System.out.println("Goodbye");
                     break;

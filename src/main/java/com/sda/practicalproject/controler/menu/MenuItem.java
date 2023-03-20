@@ -15,6 +15,8 @@ public enum MenuItem {
 
     VIEW_PET_LIST(7,"View Pet list"),
 
+    VIEW_PET_BY_ID(8,"View vet by id"),
+
     EXIT(100,"Quit app"),
 
     UNKNOWN(9999, "Unknown option");

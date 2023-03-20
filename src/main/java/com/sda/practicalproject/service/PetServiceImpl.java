@@ -9,6 +9,7 @@ import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.Queue;
 
 public class PetServiceImpl implements PetService{
 
@@ -46,6 +47,9 @@ public class PetServiceImpl implements PetService{
 
     @Override
     public Optional<Pet> findPetById(long id) {
-        return Optional.empty();
+        if (id <= 0) {
+            throw new IllegalArgumentException("Id is less or equal to zero");
+        }
+        return petRepository.findById(id);
     }
 }

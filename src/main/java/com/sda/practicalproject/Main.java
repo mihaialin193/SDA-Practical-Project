@@ -1,10 +1,14 @@
 package com.sda.practicalproject;
 
+import com.sda.practicalproject.controler.ConsultController;
 import com.sda.practicalproject.controler.PetController;
 import com.sda.practicalproject.controler.VetController;
 import com.sda.practicalproject.controler.menu.MenuItem;
+import com.sda.practicalproject.repository.ConsultRepositoryImpl;
 import com.sda.practicalproject.repository.PetRepositoryImpl;
 import com.sda.practicalproject.repository.VetRepositoryImpl;
+import com.sda.practicalproject.service.ConsultService;
+import com.sda.practicalproject.service.ConsultServiceImpl;
 import com.sda.practicalproject.service.PetServiceImpl;
 import com.sda.practicalproject.service.VetServiceImpl;
 import com.sda.practicalproject.utils.SessionManager;
@@ -23,6 +27,17 @@ public class Main {
         PetController petController = new PetController(
                 scanner, new PetServiceImpl(new PetRepositoryImpl())
         );
+
+        ConsultController consultController = new ConsultController(
+                scanner,
+                new ConsultServiceImpl(
+                        new VetRepositoryImpl(),
+                        new PetRepositoryImpl(),
+                        new ConsultRepositoryImpl()
+                )
+        );
+
+
 
         for (int i = 0; i < 100; i++) {
             System.out.println("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
@@ -69,6 +84,9 @@ public class Main {
                     break;
                 case DELETE_PET_BY_ID:
                     petController.deletePetById();
+                case CREATE_CONSULT:
+                    consultController.createConsult();
+                    break;
                 case EXIT:
                     System.out.println("Goodbye");
                     break;
@@ -79,7 +97,6 @@ public class Main {
                     System.out.println("Option not implemented");
             }
         }
-
         SessionManager.shutdown();
     }
 }

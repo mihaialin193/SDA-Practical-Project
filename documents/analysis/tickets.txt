@@ -107,9 +107,7 @@ As a user I should be able to delete an existing pet by id.
 
 
 
-
-
- PCM-15- IMPLEMENT CREATE CONSULT
+ -DONE- PCM-15- IMPLEMENT CREATE CONSULT
         As a user I should be able to add a new CONSULT with its details (vet_id, pet_id, date, description)
             If the creation process is successful, the system will allocate a unique id for the new CONSULT
             The system will validate the following data:

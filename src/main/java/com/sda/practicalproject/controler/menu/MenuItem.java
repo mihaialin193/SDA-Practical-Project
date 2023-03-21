@@ -19,6 +19,8 @@ public enum MenuItem {
 
     DELETE_PET_BY_ID(9,"Delete pet by id"),
 
+    CREATE_CONSULT(10,"Create consult"),
+
     EXIT(100,"Quit app"),
 
     UNKNOWN(9999, "Unknown option");

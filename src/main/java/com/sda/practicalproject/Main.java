@@ -93,6 +93,9 @@ public class Main {
                 case VIEW_CONSULT_BY_ID:
                     consultController.getConsultById();
                     break;
+                case UPDATE_CONSULT:
+                    consultController.updateConsultById();
+                    break;
                 case EXIT:
                     System.out.println("Goodbye");
                     break;

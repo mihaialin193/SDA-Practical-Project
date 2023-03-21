@@ -23,6 +23,8 @@ public enum MenuItem {
 
     VIEW_ALL_CONSULTS(11,"View all consults"),
 
+    VIEW_CONSULT_BY_ID(12,"View consult by id"),
+
     EXIT(100,"Quit app"),
 
     UNKNOWN(9999, "Unknown option");

@@ -90,6 +90,9 @@ public class Main {
                 case VIEW_ALL_CONSULTS:
                     consultController.viewAllConsults();
                     break;
+                case VIEW_CONSULT_BY_ID:
+                    consultController.getConsultById();
+                    break;
                 case EXIT:
                     System.out.println("Goodbye");
                     break;

@@ -1,5 +1,6 @@
 package com.sda.practicalproject.controler;
 
+import com.sda.practicalproject.model.Consult;
 import com.sda.practicalproject.repository.exception.EntityUpdateFailedException;
 import com.sda.practicalproject.service.ConsultService;
 import com.sda.practicalproject.service.exception.EntityNotFoundException;
@@ -10,14 +11,14 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Date;
+import java.util.Optional;
 import java.util.Scanner;
 
 
 public class ConsultController {
-    private static final  DateTimeFormatter CONSULT_TIME= DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+    private static final DateTimeFormatter CONSULT_TIME = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     private final Scanner scanner;
     private final ConsultService consultService;
-
 
 
     public ConsultController(Scanner scanner, ConsultService consultService) {
@@ -65,5 +66,25 @@ public class ConsultController {
                                         " pet owner's name " + c.getPet().getOwnerName() +
                                         " date of consult " + c.getAppointmentDate()
                         ));
+    }
+
+    public void getConsultById() {
+        try {
+            System.out.println("Please insert consult id");
+            long id = Long.parseLong(scanner.nextLine().trim());
+            Optional<Consult> consultOptional = consultService.getConsultById(id);
+            if (consultOptional.isPresent()) {
+                Consult consult = consultOptional.get();
+                System.out.println(consult + " " + consult.getVet() + " " + consult.getPet());
+            } else {
+                System.err.println("Consult not found");
+            }
+        } catch (NumberFormatException e) {
+            System.err.println("Please insert a numeric value ");
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Internal server error");
+        }
     }
 }

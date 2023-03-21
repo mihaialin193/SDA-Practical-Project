@@ -10,6 +10,7 @@ import com.sda.practicalproject.service.exception.EntityNotFoundException;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 public class ConsultServiceImpl implements ConsultService {
@@ -59,5 +60,10 @@ public class ConsultServiceImpl implements ConsultService {
         consultRepository.save(consult);
         System.out.println("Consult was saved successfully");
 
+    }
+
+    @Override
+    public List<Consult> getAllConsults() {
+        return consultRepository.findAll();
     }
 }

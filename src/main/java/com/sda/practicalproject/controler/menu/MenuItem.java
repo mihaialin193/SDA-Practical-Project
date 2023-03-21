@@ -21,6 +21,8 @@ public enum MenuItem {
 
     CREATE_CONSULT(10,"Create consult"),
 
+    VIEW_ALL_CONSULTS(11,"View all consults"),
+
     EXIT(100,"Quit app"),
 
     UNKNOWN(9999, "Unknown option");
